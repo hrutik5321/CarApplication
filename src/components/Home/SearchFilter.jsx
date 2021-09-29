@@ -14,19 +14,19 @@ function SearchFilter() {
       <div className="flex mt-2">
         <label className="block text-left flex-1 ">
           <select className="form-select block w-full mt-1 py-1 px-2 text-sm text-gray-600 border border-gray-400 rounded-sm outline-none">
-            <option>Option 1</option>
+            <option>Automobile</option>
             <option>Option 2</option>
           </select>
         </label>
         <label className="block text-left flex-1 ml-1">
           <select className="form-select block w-full mt-1 py-1 px-2 text-sm text-gray-600 border border-gray-400 rounded-sm outline-none">
-            <option>Option 1</option>
+            <option>ELectric Cars</option>
             <option>Option 2</option>
           </select>
         </label>
         <label className="block text-left flex-1 ml-1">
           <select className="form-select block w-full mt-1 py-1 px-2 text-sm text-gray-600 border border-gray-400 rounded-sm outline-none">
-            <option>Option 1</option>
+            <option>India</option>
             <option>Option 2</option>
           </select>
         </label>

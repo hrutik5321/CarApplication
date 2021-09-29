@@ -2,9 +2,9 @@ import React from "react";
 import { StarIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
 
-function ContentField() {
+function ContentField({ creator, drafted }) {
   return (
-    <div className="p-2 border shadow-md rounded-md mt-5 bg-white">
+    <div className="p-2 border shadow-md rounded-md mt-5 bg-white overflow-hidden">
       <div className="flex justify-between">
         <div>
           <span className="text-sm font-medium">Sandeep Kumar</span>
@@ -14,14 +14,31 @@ function ContentField() {
           </span>
         </div>
 
-        <p className="text-sm font-medium">3 min read</p>
+        <div className="flex">
+          {creator && (
+            <div>
+              <button className="px-3 h rounded-md mr-3 bg-blue-700 text-white font-medium">
+                edit
+              </button>
+            </div>
+          )}
+          {drafted ? (
+            <div>
+              <button className="px-3 rounded-md mr-3 bg-blue-700 text-white font-medium">
+                Publish
+              </button>
+            </div>
+          ) : (
+            <p className="text-sm font-medium flex-shrink-0">3 min read</p>
+          )}
+        </div>
       </div>
       <div className="flex">
         <div className="flex items-center">
           {Array(5)
             .fill()
-            .map((_) => (
-              <StarIcon className="w-4 text-yellow-400" />
+            .map((_, i) => (
+              <StarIcon className="w-4 text-yellow-400" key={i} />
             ))}{" "}
           <span className="text-xs ml-1 p-0">67</span>
         </div>

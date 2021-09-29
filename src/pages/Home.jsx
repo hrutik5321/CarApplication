@@ -8,14 +8,13 @@ function Home() {
     <div className="bg-gray-100">
       <Header />
       <div className="w-full flex items-center flex-col mt-3">
-        <div className="w-1/2 border px-4 py-3 shadow-md rounded-md bg-white">
+        <div className="w-11/12 sm:w-1/2 border px-4 py-3 shadow-md rounded-md bg-white">
           <SearchFilter />
         </div>
-        <div className="w-3/5 mt-4">
-          <ContentField />
-          <ContentField />
-          <ContentField />
-          <ContentField />
+        <div className="w-11/12 sm:w-3/5 mt-4">
+          <ContentField creator={false} drafted={false} />
+          <ContentField creator={false} drafted={false} />
+          <ContentField creator={false} drafted={false} />
         </div>
       </div>
     </div>

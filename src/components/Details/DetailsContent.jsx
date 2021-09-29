@@ -3,7 +3,7 @@ import React from "react";
 function DetailsContent() {
   return (
     <div className="w-full flex items-center flex-col">
-      <div className="mt-3 w-3/4 flex">
+      <div className="w-11/12 mt-3 sm:w-3/4 sm:flex">
         <div className="flex-1 p-3">
           <img
             src="https://www.pluglesspower.com/wp-content/uploads/2016/12/charger-diagram-corded-3.jpg"
