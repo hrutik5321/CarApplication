@@ -1,5 +1,8 @@
 import React from "react";
 import { SearchIcon } from "@heroicons/react/solid";
+import LeftDropDown from "./SearchFilterDropDowns/LeftDropDown";
+import CenterDropDown from "./SearchFilterDropDowns/CenterDropDown";
+import RightDropDown from "./SearchFilterDropDowns/RightDropDown";
 
 function SearchFilter() {
   return (
@@ -11,25 +14,16 @@ function SearchFilter() {
         </p>
         <p className="text-base text-blue-400 font-semibold">Save Filter</p>
       </div>
-      <div className="flex mt-2">
-        <label className="block text-left flex-1 ">
-          <select className="form-select block w-full mt-1 py-1 px-2 text-sm text-gray-600 border border-gray-400 rounded-sm outline-none">
-            <option>Automobile</option>
-            <option>Option 2</option>
-          </select>
-        </label>
-        <label className="block text-left flex-1 ml-1">
-          <select className="form-select block w-full mt-1 py-1 px-2 text-sm text-gray-600 border border-gray-400 rounded-sm outline-none">
-            <option>ELectric Cars</option>
-            <option>Option 2</option>
-          </select>
-        </label>
-        <label className="block text-left flex-1 ml-1">
-          <select className="form-select block w-full mt-1 py-1 px-2 text-sm text-gray-600 border border-gray-400 rounded-sm outline-none">
-            <option>India</option>
-            <option>Option 2</option>
-          </select>
-        </label>
+      <div className="flex mt-2 items-start">
+        <div className="block text-left left">
+          <LeftDropDown />
+        </div>
+        <div className="block text-left center">
+          <CenterDropDown />
+        </div>
+        <div className="block text-left right">
+          <RightDropDown />
+        </div>
         <SearchIcon className="w-6 ml-2 text-gray-500" />
       </div>
     </div>
