@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
+import { ArrowLeftIcon } from "@heroicons/react/outline";
+import { useHistory } from "react-router-dom";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 function CreatePost() {
   const [text, setText] = useState("");
   const [showSlide, setShowSlide] = useState(false);
   const [subheading, setSubheading] = useState("");
+  let history = useHistory();
+
   return (
     <>
       <Header />
+      <div
+        className="p-1 ml-3 hover:bg-gray-200 rounded-full w-min mt-2 cursor-pointer"
+        onClick={() => history.goBack()}
+      >
+        <ArrowLeftIcon className="w-6 text-gray-700" />
+      </div>
       <div className="w-full flex justify-center mt-3">
         <div className="w-11/12 lg:w-7/12 flex items-center px-4 py-2 border shadow-md">
           <div className="flex-1">
