@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Details from "./pages/Details";
 import Creator from "./pages/Creator";
+import CreatePost from "./pages/CreatePost";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/creator" exact>
             <Creator />
+          </Route>
+          <Route path="/create" exact>
+            <CreatePost />
           </Route>
         </Switch>
       </Router>

@@ -16,11 +16,11 @@ function ContentField({ creator, drafted }) {
 
         <div className="flex">
           {creator && (
-            <div>
+            <Link to="/create">
               <button className="px-3 h rounded-md mr-3 bg-blue-700 text-white font-medium">
                 edit
               </button>
-            </div>
+            </Link>
           )}
           {drafted ? (
             <div>

@@ -13,3 +13,14 @@
 .right {
   flex: 0.35;
 }
+.clip__path {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  right: -78px;
+  top: 0;
+}
+
+.ck-editor__editable {
+  min-height: 150px;
+  max-height: 300px;
+  overflow-y: scroll;
+}

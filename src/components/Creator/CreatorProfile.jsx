@@ -4,7 +4,7 @@ function CreatorProfile() {
   return (
     <div className=" py-4 px-3 max-h-60 flex flex-shrink-0 flex-col bg-white items-center border border-gray-300 rounded-md shadow-sm">
       <img
-        src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-1-avatar-2754574_120513.png"
+        src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
         alt="profile user"
         className="w-20 h-20 rounded-full"
       />
