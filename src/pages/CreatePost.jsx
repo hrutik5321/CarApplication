@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import { ArrowLeftIcon } from "@heroicons/react/outline";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 function CreatePost() {
@@ -10,6 +11,10 @@ function CreatePost() {
   const [showSlide, setShowSlide] = useState(false);
   const [subheading, setSubheading] = useState("");
   let history = useHistory();
+
+  const freeHandler = () => {
+    window.location.reload();
+  };
 
   return (
     <>
@@ -107,12 +112,12 @@ function CreatePost() {
           <div className="w-full flex flex-col items-center">
             <div
               className="relative flex items-center mt-6"
-              onClick={() => setShowSlide(!showSlide)}
+              onClick={() => setShowSlide(true)}
             >
               <div className="cursor-pointer text-center w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center relative text-white">
                 <span>+</span>
               </div>
-              {showSlide && (
+              {subheading !== "Paid" && showSlide && (
                 <div className=" absolute  bg-gray-200 clip__path px-2">
                   <p
                     className="ml-6 pr-2 cursor-pointer hover:text-blue-600"
@@ -120,15 +125,16 @@ function CreatePost() {
                   >
                     Paid
                   </p>
-                  <p
+                  <Link
+                    to="/create"
                     className="ml-6 pr-2 cursor-pointer hover:text-blue-600"
-                    onClick={() => setSubheading("Free")}
+                    onClick={freeHandler}
                   >
                     Free
-                  </p>
+                  </Link>
                 </div>
               )}
-              {subheading && !showSlide && (
+              {subheading && showSlide && (
                 <p className="ml-3 font-semibold">{subheading}</p>
               )}
               {!subheading && !showSlide && (
